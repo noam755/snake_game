@@ -1,3 +1,52 @@
+body{
+    height:100vh;
+    justify-content :center;
+    align-items:center;
+    background-color: darkslategrey;   
+}
+#grid{
+    display:grid;
+    grid-template-columns: repeat(20,lfr);
+    width:50vh;
+    height;50vh;
+    margin:20px auto;
+    background: 
+    border: 4px solid #ffffff;
+    background:#6F3573;
+}
+.apple{
+    background-color: crimson;
+    border-radius: 50%;
+}
+.snake{
+    background-color: forestgreen;
+    border-radius: 2px;
+}
+.controls {margin:15px;}
+.arrow{
+    width:60px;
+    height:60px;
+    font-size: 24px;
+    font-weight: bold;
+    margin:4px;
+    cursor:pointer;
+    background:000000;
+    border:2px solid floralwhite;
+    border-radius: 12px;
+    transition: background:0.2
+}
+.arrow:active{
+background:#86afac;
+}
+#strt-btn{
+    padding:12px 30px;
+    background-color: beige;
+    color:blue
+    border:none;
+    border-radius:8px;
+    font-size 18px;
+    cursor:pointer;
+}
 
 
 
