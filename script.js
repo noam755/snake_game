@@ -1,13 +1,11 @@
-function hello(){
-let x = prompt("enter number")
-if (x**2 % 2 == 0){
-    document.writeln("<div class =userinput>"+ x +"</div>")
+let grid = document.getElementById('grid')
+let squares = []
+let snake = [0,1,2]
+let direction = 1
+for (let i = 0; i<400;i++ ){
+    const square =
+    document.createElement('div')
+    const squarechild[]
+    grid.appendChild(square)
+    squares.push(squares)
 }
-}
-hello()
-function bye(){
-let x = prompt("enter number")
-let y = Math.sqrt(x)
-document.writeln("<div class =userinput>"+ y +"</div>")
-}
-bye()
