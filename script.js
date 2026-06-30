@@ -1,11 +1,51 @@
-let grid = document.getElementById('grid')
+const grid = document.getElementById('grid')
+const scoreDisplay = document.getElementById('score')
 let squares = []
-let snake = [0,1,2]
+let currentSnake = [2,1,0]
 let direction = 1
-for (let i = 0; i<400;i++ ){
-    const square =
-    document.createElement('div')
-    const squarechild[]
-    grid.appendChild(square)
-    squares.push(squares)
+let appleIndex = 0
+let timerId = 0
+let interValTime = 200
+function createBoard(){
+    for (let i = 0; i < 400; i++){
+        const square = document.createElement('div')
+        grid.appendChild(square)
+        squares.push(square)
+    }
 }
+createBoard()
+function move(){
+    const tail = currentSnake.pop()
+    squares[tail].classList.remove("snake")
+    squares[tail].classList.remove("snake")
+    const newHead = currentSnake[0] + direction
+    currentSnake.unshift(newHead) 
+    squares [newHead].classList.add('snake')   
+    const hitBottom = (currentSnake[0] + 20>=400 && direction === 20)
+    const hitTop = (currentSnake[0] - 20 < 0 && direction === -20)
+    const hitRight = (currentSnake[0] % 20 === 19 && direction === 1)
+    const hitLeft = (currentSnake[0] % 20 === 0 && direction === -20)
+    const hitSelf = squares [currentSnake[0] = direction]?.classList.contains('snake')
+    function startGame(){
+        currentSnake.forEach(index=> squares[index].classList.remove('snake'))
+        clearinterVal(timerId)
+    }
+}
+function generateApple(){
+     do {
+    appleIndex = Math.floor(Math.random() * squares.length)
+ } while (squares[appleIndex].classList.contains('snake'))
+squares [snakeIndex].classList.add('apple')
+function changeDir(newDir){
+    if (direction + newDir !== 0){
+        direction=newDir
+    }
+}
+}
+document.addEventListener('keydown',(e)=>{
+    if (e.key === 'ArrowUp') changeDir(-20)
+     if (e.key === 'ArrowDown') changeDir(20)
+     if (e.key === 'ArrowLeft') changeDir(1)
+     if (e.key === 'ArrowRight') changeDir(-1)
+})
+generateApple()
