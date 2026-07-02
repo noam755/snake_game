@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Snake" />
+    <link rel="manifest" href="assets/site.webmanifest" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>snake</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="title">snake</h1>
-    <div class="gamecontainer">
-    <h2>score: <span id="score">0</span></h2>
-    <div id="grid"></div>
+    
+    <div class="game-container">
+        <h1 id="title">snake</h1>
+        <h2>score: <span id="score">0</span></h2>
+        <div id="grid"></div>
+        <button class="arrow" onclick="startGame()">Play Game</button>
+        <button class="arrow" onclick="endGame()">End Game</button>
     </div>
 
-    <div id="controls"></div>
-    <div id=""></div>
+    
     <script src="script.js"></script>
+   
 </body>
 </html>
