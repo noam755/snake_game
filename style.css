@@ -1,8 +1,14 @@
 body{
-    height:100vh;
+    height:100dvh;
     justify-content :center;
     align-items:center;
-    background-color: darkslategrey;   
+    background-color: rgb(87, 4, 95);
+    background-image:url('assets/mystical-purple-space-waves-vibrant-cosmic-background_894134-4015.avif');
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    display:flex;
+    overflow: hidden;   
 }
 #grid{
     display:grid;
@@ -26,7 +32,7 @@ body{
 }
 .controls {margin:15px;}
 .arrow{
-    width:60px;
+    width:120px;
     height:60px;
     font-size: 24px;
     font-weight: bold;
@@ -36,6 +42,8 @@ body{
     border:2px solid floralwhite;
     border-radius: 12px;
     transition: background 0.2;
+    align-items: center;
+    background-color: #ffffff;
 }
 .arrow:active{
 background:#86afac;
@@ -52,6 +60,17 @@ background:#86afac;
 #title{
     align-items:center;
 }
+.game-container{
+    
+ 
+    text-align: center;
+    background: #6c2ca8;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 25px 10px rgb(71, 5, 86);
+}
+
+
 
 
 
